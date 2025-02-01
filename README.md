@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+# Meu Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é meu portfólio pessoal desenvolvido com React, TypeScript e Vite, apresentando meus projetos e habilidades como desenvolvedor.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi construído usando:
 
-## Expanding the ESLint configuration
+- React 18
+- TypeScript
+- Vite
+- Styled Components
+- React Router DOM
+- ESLint
+- Prettier
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 💻 Funcionalidades
 
-- Configure the top-level `parserOptions` property like this:
+- Página inicial com apresentação pessoal
+- Seção de projetos com demonstrações
+- Seção de habilidades técnicas
+- Página de contato
+- Design responsivo
+- Tema claro/escuro
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-portfolio.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Instale as dependências:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Execute o projeto:
+
+```bash
+npm run dev
+```
+
+## 📝 Estrutura do Projeto
+
+```
+src/
+  ├── components/     # Componentes reutilizáveis
+  ├── pages/         # Páginas da aplicação
+  ├── styles/        # Estilos globais e temas
+  ├── assets/        # Imagens e outros recursos
+  ├── utils/         # Funções utilitárias
+  └── types/         # Definições de tipos TypeScript
+```
+
+## 🤝 Contribuições
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## 📫 Contato
+
+- Email: seu-email@exemplo.com
+- LinkedIn: [Seu Nome](https://linkedin.com/in/seu-perfil)
+- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
