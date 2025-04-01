@@ -29,6 +29,8 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
         'scroll-left': 'scroll-left var(--duration, 20s) linear infinite',
         'scroll-right': 'scroll-right var(--duration, 20s) linear infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
       boxShadow: {
         'neon-green': '0 0 10px rgba(0, 255, 65, 0.5)',
@@ -39,8 +41,14 @@ module.exports = {
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        }
       }
     },
   },
   plugins: [],
-}
+};
