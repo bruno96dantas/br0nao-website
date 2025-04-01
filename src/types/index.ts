@@ -3,7 +3,10 @@ import React from 'react';
 export interface SkillProps {
   name: string;
   icon: string;
-  proficiency: number;
+  image: string;
+  description: string;
+  type: string;
+  experience: string;
 }
 
 export interface EducationProps {

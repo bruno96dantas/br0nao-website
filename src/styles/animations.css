@@ -121,3 +121,53 @@
   from, to { border-color: transparent }
   50% { border-color: currentColor; }
 }
+
+/* Adicione estas animações ao seu arquivo animations.css */
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(calc(-50% - 1rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left var(--duration, 20s) linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right var(--duration, 20s) linear infinite;
+}
+
+@keyframes rotate-y {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Adicione estas classes para o efeito 3D */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
