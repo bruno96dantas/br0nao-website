@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+:root {
+  --green-glow: 0 0 10px rgba(0, 255, 65, 0.5);
+  --magenta-glow: 0 0 10px rgba(255, 0, 255, 0.5);
+  --dark-green-glow: 0 0 10px rgba(0, 143, 17, 0.5);
+  --dark-purple-glow: 0 0 10px rgba(177, 0, 177, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.dark {
+  @apply bg-[#0c0c0c] text-[#e0e0e0];
+}
+
+.light {
+  @apply bg-[#f0f0f0] text-[#121212];
+}
+
+.shadow-neon {
+  box-shadow: var(--green-glow);
+}
+
+.dark .shadow-neon {
+  box-shadow: var(--green-glow);
+}
+
+.shadow-neon:not(.dark) {
+  box-shadow: var(--dark-green-glow);
+}
+
+.cyberpunk-font {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.cyberpunk-text {
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
+}
+
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-hero-pattern-dark {
+  background-color: #0c0c0c;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+}
+
+.bg-hero-pattern-light {
+  background-color: #f0f0f0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 143, 17, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(177, 0, 177, 0.1) 0%, transparent 50%);
+}
+
+.grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(0, 255, 65, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 65, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.cyberpunk-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cyberpunk-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.cyberpunk-button:hover:before {
+  left: 100%;
+}
+
+.cyberpunk-overlay-dark {
+  background: linear-gradient(45deg, rgba(0, 255, 65, 0.1), transparent);
+}
+
+.cyberpunk-overlay-light {
+  background: linear-gradient(45deg, rgba(0, 143, 17, 0.1), transparent);
+}
+
+.cyberpunk-image:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 255, 65, 0.2), transparent);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cyberpunk-image:hover:before {
+  opacity: 1;
+}
+
+/* Adicione classes personalizadas para hover */
+.hover\:text-green-neon:hover {
+  color: #00ff41;
+}
+
+.hover\:text-magenta-neon:hover {
+  color: #ff00ff;
+}
+
+.hover\:text-dark-green:hover {
+  color: #008f11;
+}
+
+.hover\:text-dark-purple:hover {
+  color: #b100b1;
+}
+
+.hover\:bg-green-neon:hover {
+  background-color: #00ff41;
+}
+
+.hover\:bg-magenta-neon:hover {
+  background-color: #ff00ff;
+}
+
+.hover\:bg-dark-green:hover {
+  background-color: #008f11;
+}
+
+.hover\:bg-dark-purple:hover {
+  background-color: #b100b1;
+}
+
+.hover\:shadow-neon:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.dark .hover\:shadow-neon:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.hover\:shadow-neon:not(.dark):hover {
+  box-shadow: 0 0 10px rgba(0, 143, 17, 0.5);
+}
+
+.hover\:scale-\[1\.02\]:hover {
+  transform: scale(1.02);
+}
